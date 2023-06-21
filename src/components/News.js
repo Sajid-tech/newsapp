@@ -35,7 +35,7 @@ export class News extends Component {
 
     async updateNews() {
         this.props.setProgress(10);
-        let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=53a4b864558e4e7ebb5872d217c7ecf9&page=${this.state.page}&pageSize=${this.props.pageSize}`;
+        let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${this.props.apiKey}&page=${this.state.page}&pageSize=${this.props.pageSize}`;
         this.setState({ loading: true });
         let data = await fetch(url);
         this.props.setProgress(30);
@@ -52,6 +52,7 @@ export class News extends Component {
     }
 
     async componentDidMount() {
+
         // let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=53a4b864558e4e7ebb5872d217c7ecf9&page=${this.state.page}&pageSize=${this.props.pageSize}`;
         // this.setState({ loading: true });
         // let data = await fetch(url);
@@ -107,7 +108,7 @@ export class News extends Component {
             page: this.state.page + 1,
 
         })
-        let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=53a4b864558e4e7ebb5872d217c7ecf9&page=${this.state.page}&pageSize=${this.props.pageSize}`;
+        let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${this.props.apiKey}&page=${this.state.page}&pageSize=${this.props.pageSize}`;
         let data = await fetch(url);
         let parsedData = await data.json()
         console.log(parsedData);
@@ -120,6 +121,7 @@ export class News extends Component {
 
 
     render() {
+
         return (
             <div className="container my-3">
                 <h1 className="text-center" style={{ margin: '35px 0px' }}>NewsRoom - Top {this.capitalizeFirstLetter(this.props.category)} Headlines</h1>
@@ -149,6 +151,8 @@ export class News extends Component {
                 </div> */}
             </div>
         );
+
+
     }
 }
 
