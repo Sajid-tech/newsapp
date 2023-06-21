@@ -133,7 +133,7 @@ export class News extends Component {
                     hasMore={this.state.articles.length !== this.state.totalResults}
                     loader={<Spinner />}
                 >
-                    <div className="container">
+                    <div className='container' >
                         <div className="row">
                             {this.state.articles.map((elements) => {
                                 return <div className="col-md-4" key={elements.url}>

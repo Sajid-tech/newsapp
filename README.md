@@ -1,5 +1,7 @@
 # It is a project that make from class based componnets
 
+#if you get any error that means Api keys exceed the limit so pls try some times
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
