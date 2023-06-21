@@ -6,7 +6,8 @@ export class NavBar extends Component {
     render() {
         return (
             <div >
-                <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+                <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark " >
+
                     <div className="container-fluid">
                         <Link className="navbar-brand" to="/">
                             <img src="https://www.freeiconspng.com/uploads/news-icon-24.png" alt="icon" width="30" height="30" />

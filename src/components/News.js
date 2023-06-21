@@ -124,7 +124,7 @@ export class News extends Component {
 
         return (
             <div className="container my-3">
-                <h1 className="text-center" style={{ margin: '35px 0px' }}>NewsRoom - Top {this.capitalizeFirstLetter(this.props.category)} Headlines</h1>
+                <h1 className="text-center" style={{ margin: '35px 0px', marginTop: '90px' }}>NewsRoom - Top {this.capitalizeFirstLetter(this.props.category)} Headlines</h1>
                 {this.state.loading && <Spinner />}
 
                 <InfiniteScroll
